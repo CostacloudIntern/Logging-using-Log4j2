@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<appender name="Console-Appender" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>[%d{yyyy-MM-dd'T'HH:mm:ss.sss'Z'}] [%C] [%t] [%L] [%-5p] %m%n</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="File-Appender" class="ch.qos.logback.core.FileAppender">
+		<FilePath>C:/log/MusicLogApplication.log</FilePath>
+		<encoder>
+			<pattern>[%d{yyyy-MM-dd'T'HH:mm:ss.sss'Z'}] [%C] [%t] [%L] [%-5p] %m%n</pattern>
+		</encoder>
+	</appender>
+	
+	<root level="DEBUG">
+		<appender-ref ref="Console-Appender" />
+		<appender-ref ref="File-Appender" />
+	</root>
+</configuration>
